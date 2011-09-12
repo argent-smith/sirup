@@ -19,8 +19,8 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   s.add_development_dependency "rake"
   s.add_development_dependency "rspec"
-  s.add_development_dependency "bddgen"
   unless ENV['TRAVIS']
+    s.add_development_dependency "bddgen"
     s.add_development_dependency "cucumber"
     s.add_development_dependency "ZenTest"
     s.add_development_dependency "test-unit"

@@ -1,5 +1,7 @@
 # SIruP: SIP in Ruby
 
+[![Build Status](https://secure.travis-ci.org/argent-smith/sirup.png)](http://travis-ci.org/argent-smith/sirup)
+
 An attemt to build SIP library in pure Ruby.
 
 ## Prerequisites

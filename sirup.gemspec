@@ -21,8 +21,10 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rspec"
   s.add_development_dependency "cucumber"
   s.add_development_dependency "bddgen"
-  s.add_development_dependency "ZenTest"
-  s.add_development_dependency "test-unit"
-  s.add_development_dependency "redgreen"
+  unless ENV['TRAVIS']
+    s.add_development_dependency "ZenTest"
+    s.add_development_dependency "test-unit"
+    s.add_development_dependency "redgreen"
+  end
 end
 

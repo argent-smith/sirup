@@ -15,7 +15,7 @@ Given /^I've entered SIP password$/ do
 end
 
 When /^I send REGISTER message$/ do
-  @client.sendRequest :register
+  @client.send_request :register
 end
 
 Then /^I should get a result from server$/ do

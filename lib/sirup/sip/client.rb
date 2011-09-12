@@ -13,7 +13,7 @@ module Sirup
         @response = Response.new
       end
 
-      def sendRequest req
+      def send_request req
         
       end
     end

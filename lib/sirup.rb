@@ -1,5 +1,7 @@
+$:.unshift File.dirname __FILE__
+
 require "sirup/version"
+require "sirup/sip"
 
 module Sirup
-  # Your code goes here...
 end

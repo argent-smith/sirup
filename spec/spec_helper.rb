@@ -7,7 +7,3 @@ require "bundler/setup"
 require 'rspec'
 
 require 'sirup'
-
-RSpec.configure do |config|
-  config.fail_fast = true
-end

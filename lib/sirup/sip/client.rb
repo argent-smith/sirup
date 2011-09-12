@@ -1,6 +1,3 @@
-$:.unshift File.dirname __FILE__
-require 'response'
-
 module Sirup
   module SIP
 

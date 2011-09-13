@@ -19,6 +19,12 @@ desc "Start Autotest CI"
 task :autotest => [".autotest", ".rspec"] do
   system "bundle exec autotest"
 end
+namespace :autotest do
+  desc "autotest + features"
+  task :features do
+    system "(export AUTOFEATURE=true && bundle exec autotest)"
+  end
+end
 
 
 # Cucumber part

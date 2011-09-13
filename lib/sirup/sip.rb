@@ -3,6 +3,7 @@ $:.unshift File.dirname __FILE__
 # Local requires
 require 'sip/client'
 require 'sip/server_data'
+require 'sip/session'
 require 'sip/message'
 require 'sip/response'
 

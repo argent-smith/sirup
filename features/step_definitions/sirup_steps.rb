@@ -1,24 +1,28 @@
-Given /^I've instantiated the SIP client$/ do
+Given /^I've started the SIP client$/ do
   @client = Sirup::SIP::Client.new
 end
 
-Given /^I've entered server's address$/ do
-  @client.server = "sip.rtelekom.net"
+Given /^I've started a Session in it$/ do
+  @sess = @client.new_session
 end
 
-Given /^I've entered SIP login$/ do
-  @client.login = "sirup"
+Given /^I've entered server's address as "([^"]*)"$/ do |address|
+  @sess.server = address
 end
 
-Given /^I've entered SIP password$/ do
-  @client.password = "1FDQDGYo"
+Given /^I've entered SIP login as "([^"]*)"$/ do |login|
+  @sess.login = login
 end
 
-When /^I send REGISTER message$/ do
-  @client.send_message :register
+Given /^I've entered SIP password as "([^"]*)"$/ do |password|
+  @sess.password = password
+end
+
+When /^I send "([^"]*)" message$/ do |msg|
+  @sess.send_message msg.downcase.to_sym
 end
 
 Then /^I should get a result from server$/ do
-  @client.response.code.should exist
+  @sess.response.code.should_not be_nil
 end
 

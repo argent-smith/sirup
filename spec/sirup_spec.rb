@@ -4,7 +4,7 @@ describe Sirup, "the SIP implementation container" do
   it "contains SIP submodule" do
     Sirup::SIP.should be_instance_of Module
   end
-  describe SIP, "the implementation library" do
+  describe Sirup::SIP, "the implementation library" do
     it "contains Client class" do
       Sirup::SIP::Client.should be_instance_of Class
     end

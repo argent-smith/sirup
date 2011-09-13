@@ -23,5 +23,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency "ZenTest"
   s.add_development_dependency "test-unit"
   s.add_development_dependency "redgreen"
+  s.add_development_dependency "ruby-graphviz"
 end
 

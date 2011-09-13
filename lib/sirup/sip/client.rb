@@ -3,15 +3,17 @@ module Sirup
 
     # SIP client implementation
     class Client
-      attr_accessor :server, :login, :password
-      attr_reader   :response
+
+      # Reads array of Sessions
+      attr_reader :sessions
 
       def initialize
-        @response = Response.new
+        @sessions = []
       end
 
-      def send_request req
-        
+      def new_session
+        @sessions << s = Session.new
+        s
       end
     end
   end

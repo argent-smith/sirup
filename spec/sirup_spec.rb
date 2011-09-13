@@ -17,5 +17,8 @@ describe Sirup, "the SIP implementation container" do
     it "contains Response class" do
       Sirup::SIP::Response.should be_instance_of Class
     end
+    it "contains Session class" do
+      Sirup::SIP::Session.should be_instance_of Class
+    end
   end
 end
